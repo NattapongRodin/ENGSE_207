@@ -8,17 +8,17 @@
 ## C1: Context Diagram (System Context)
 
 ระบบ Library Management System ให้บริการ REST API ผ่าน Express โดยผู้ใช้/นักพัฒนาสามารถเรียกใช้งานผ่าน Browser, Postman, Thunder Client ได้ และระบบจัดเก็บข้อมูลใน SQLite (`library.db`)
-
+``` text
 ┌──────────────────────────┐
 │     User / Developer     │
 │ (Browser / Postman etc.) │
-
+└──────────────────────────┘
               │ HTTP/REST
               ▼
 ┌──────────────────────────┐
 │Library Management System │
 │ (Node.js + Express)      │
-
+└──────────────────────────┘
               │ SQL (via sqlite3)
               ▼
 ┌──────────────────────────┐
@@ -26,7 +26,7 @@
 │      (library.db)        │
 └──────────────────────────┘
 
-
+```
 **External Actors**
 - User/Developer: เรียกใช้งาน API เพื่อจัดการข้อมูลหนังสือ (CRUD, borrow, return)
 
@@ -39,7 +39,7 @@
 
 โครงสร้างระบบถูก Refactor จาก Monolithic เป็น Layered Architecture เพื่อแยก concerns ตามหน้าที่
 
-
+```text
 ┌─────────────────────────────────────┐
 │ Presentation Layer                  │
 │ ┌──────────────────────────────┐    │
@@ -71,7 +71,7 @@
           │ SQLite   │
           └──────────┘
 
-          
+```         
 ---
 
 ## Responsibilities (หน้าที่ของแต่ละ Layer)
