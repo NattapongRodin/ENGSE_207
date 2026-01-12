@@ -12,13 +12,13 @@
 ┌──────────────────────────┐
 │     User / Developer     │
 │ (Browser / Postman etc.) │
-└─────────────┬────────────┘
+
               │ HTTP/REST
               ▼
 ┌──────────────────────────┐
 │Library Management System │
 │ (Node.js + Express)      │
-└─────────────┬────────────┘
+
               │ SQL (via sqlite3)
               ▼
 ┌──────────────────────────┐
