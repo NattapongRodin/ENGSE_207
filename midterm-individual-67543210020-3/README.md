@@ -35,6 +35,7 @@ midterm-individual-67543210020-3/
 ├── README.md
 └── ARCHITECTURE.md
 
+```
 ## 🎯 Refactoring Summary
 
 ### ปัญหาของ Monolithic (เดิม):
