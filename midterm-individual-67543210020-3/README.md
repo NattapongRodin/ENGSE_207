@@ -9,24 +9,31 @@
 Layered Architecture (3-tier)
 
 ## 📂 Project Structure
+```text
 midterm-individual-67543210020-3/
 ├── src/
-│ ├── presentation/
-│ │ ├── routes/ # Route definitions (HTTP paths → controller)
-│ │ ├── controllers/ # Handle req/res and call service
-│ │ └── middlewares/ # Centralized error handling
-│ ├── business/
-│ │ ├── services/ # Business logic and rules
-│ │ └── validators/ # Validation (ID, ISBN, required fields)
-│ └── data/
-│ ├── repositories/ # DB operations (SQL)
-│ └── database/ # DB connection & initialization
-├── server.js # Entry point
+│   ├── presentation/
+│   │   ├── routes/
+│   │   │   └── bookRoutes.js        # Route definitions
+│   │   ├── controllers/
+│   │   │   └── bookController.js    # Handle HTTP req/res
+│   │   └── middlewares/
+│   │       └── errorHandler.js      # Centralized error handling
+│   ├── business/
+│   │   ├── services/
+│   │   │   └── bookService.js       # Business logic & rules
+│   │   └── validators/
+│   │       └── bookValidator.js     # Validation (ID, ISBN, required)
+│   └── data/
+│       ├── repositories/
+│       │   └── bookRepository.js    # DB operations (SQL)
+│       └── database/
+│           └── connection.js        # DB connection & init
+├── public/
+├── server.js
 ├── package.json
 ├── README.md
-├── ARCHITECTURE.md
-└── public/
-
+└── ARCHITECTURE.md
 
 ## 🎯 Refactoring Summary
 
